@@ -1,0 +1,40 @@
+.item-detail {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  max-width: 700px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-detail img {
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.item-detail h1 {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.item-detail p {
+  color: #cccccc;
+  margin: 0.3rem 0;
+}
+
+.item-detail button {
+  background-color: #bb86fc;
+  color: #121212;
+  padding: 0.8rem 1.4rem;
+  border-radius: 0.4rem;
+  margin-top: 1rem;
+}
+
+.item-detail button:hover {
+  background-color: #9b5de5;
+}

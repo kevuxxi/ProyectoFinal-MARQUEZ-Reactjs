@@ -1,0 +1,20 @@
+.loading {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.loading-spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #2e2e2e;
+  border-top-color: #bb86fc;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
