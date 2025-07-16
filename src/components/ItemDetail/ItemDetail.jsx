@@ -1,6 +1,18 @@
 import './ItemDetail.css';
+import { useContext } from 'react';
+import { Cartcontex } from '../../contex/cartcontex';
+import ItemCount from '../ItemCount/ItemCount';
+
 
 const ItemDetail = ({ product = {} }) => {
+
+    const { addProductInCart } = useContext(Cartcontex);
+
+    const addProduct = (quantity) => {
+        const productCart = { ...product, quantity };
+        addProductInCart(productCart);
+    }
+
     return (
         <div className="item-detail">
             <img src={product.image} alt={product.name} />
@@ -10,9 +22,7 @@ const ItemDetail = ({ product = {} }) => {
                 <p className="price">Precio: ${product.price}</p>
                 <p>Stock: {product.stock} unidades</p>
                 <p>Categoría: {product.category}</p>
-                <button onClick={() => alert(`¡'${product.name}' añadido al carrito!`)}>
-                    Añadir al Carrito
-                </button>
+                <ItemCount stock={product.stock} addProduct={addProduct} />
             </div>
         </div>
     )

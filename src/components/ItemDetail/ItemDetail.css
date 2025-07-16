@@ -27,14 +27,7 @@
   margin: 0.3rem 0;
 }
 
-.item-detail button {
-  background-color: #bb86fc;
-  color: #121212;
-  padding: 0.8rem 1.4rem;
-  border-radius: 0.4rem;
-  margin-top: 1rem;
-}
 
 .item-detail button:hover {
-  background-color: #9b5de5;
+  background-color: #03dac5;
 }
