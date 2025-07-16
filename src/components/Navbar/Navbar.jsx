@@ -1,4 +1,4 @@
-import { Link, Links } from "react-router-dom";
+import { Link } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 import './Navbar.css';
 import logo from '../../assets/Gemini_Generated_Image_rj4baqrj4baqrj4b (1).png';

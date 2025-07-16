@@ -3,21 +3,24 @@ import Navbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { Cartprovider } from './contex/cartcontex';
 
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="container">
-        <Navbar />
+      <Cartprovider>
+        <div className="container">
+          <Navbar />
 
-        <Routes>
-          <Route path="/" element={<ItemListContainer />} />
-          <Route path="/category/:category" element={<ItemListContainer />} />
-          <Route path="/detail/:id" element={<ItemDetailContainer />} />
-          <Route path="*" element={<div>Error 404</div>} />
-        </Routes>
-      </div>
+          <Routes>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/category/:category" element={<ItemListContainer />} />
+            <Route path="/detail/:id" element={<ItemDetailContainer />} />
+            <Route path="*" element={<div>Error 404</div>} />
+          </Routes>
+        </div>
+      </Cartprovider>
     </BrowserRouter>
   );
 }
