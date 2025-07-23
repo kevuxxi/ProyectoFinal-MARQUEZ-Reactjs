@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"
 import { doc, getDoc } from "firebase/firestore";
 import db from '../db/firebase.js'
-import { data } from "react-router-dom";
 
 const useProduct = (id) => {
     const [product, setproduct] = useState({});

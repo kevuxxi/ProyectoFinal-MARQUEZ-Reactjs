@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { Cartcontex } from "../../contex/cartcontex";
 import './Cart.css';
+import { Link, Links } from "react-router-dom";
 const Cart = () => {
     const { cart, totalPrice, deleteProductById, deleteAllProducts } = useContext(Cartcontex);
 
@@ -15,12 +16,15 @@ const Cart = () => {
                         <p>c/u: ${productCart.price}</p>
                         <p>cantidad: {productCart.quantity}</p>
                         <p>precio parcial: ${productCart.price * productCart.quantity}</p>
+
                         <button onClick={() => deleteProductById(productCart.id)} >Eliminar</button>
+
                     </div>
                 ))
             }
 
             <p>Precio total: ${totalPrice()}</p>
+            <Link to='/checkout'> <button>Continuar con mi compra</button></Link>
             <button onClick={deleteAllProducts} className="cart-empty">
                 Vaciar carrito
             </button>
