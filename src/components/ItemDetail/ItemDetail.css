@@ -27,7 +27,23 @@
   margin: 0.3rem 0;
 }
 
+.gotocarcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
 
-.item-detail button:hover {
+
+
+.gotocar {
+  padding: 0.5rem 1rem;
+  background-color: #bb86fc;
+  color: #121212;
+  font-weight: bold;
+}
+
+.gotocar:hover {
   background-color: #03dac5;
 }

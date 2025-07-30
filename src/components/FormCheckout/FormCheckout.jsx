@@ -1,5 +1,4 @@
-import React from 'react'
-
+import './FormCheckout.css';
 const FormCheckout = ({ dataform, handlechangeinput, sendorder }) => {
     return (
         <div className='form-container'>

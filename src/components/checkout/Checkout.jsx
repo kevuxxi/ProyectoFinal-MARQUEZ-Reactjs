@@ -49,7 +49,7 @@ const Checkout = () => {
         <div className='checkout'>
             {
                 orderid ? (
-                    <div>
+                    <div className="order-confirmation">
                         <h2>Orden Generada</h2>
                         <p>Indentificador de Compra: {orderid} </p>
                         <Link to={'/'}>
