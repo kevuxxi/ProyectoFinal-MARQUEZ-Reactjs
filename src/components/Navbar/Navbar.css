@@ -9,7 +9,7 @@
 }
 
 .logo {
-  height:300px;
+  height: 300px;
   width: auto;
   object-fit: contain;
 }
@@ -38,33 +38,63 @@
   color: #bb86fc;
 }
 
-/* Responsive: ocultar links y mostrar menú hamburguesa en móvil */
 @media (max-width: 768px) {
+  .navbar {
+    padding: 0.8rem 1rem;
+    /* Un poco menos padding en móvil */
+    /* En móvil, queremos Logo | Toggle | CartWidget */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    height: 100px;
+    margin-right: 0;
+    order: 1;
+  }
+
   .menu-toggle {
     display: block;
+    order: 2;
+    margin-left: auto;
+    margin-right: 10px;
   }
-.logo {
-  height:60px;
-  width: auto;
-  object-fit: contain;
-}
+
+  .cart-widget-container {
+    margin-left: 0;
+    order: 3;
+  }
+
+
   .contenedor-links {
     display: none;
     position: absolute;
     top: 100%;
-    right: 0;
+    left: 0;
+    width: 95%;
     background-color: #1f1f1f;
     flex-direction: column;
     align-items: flex-start;
-    width: 100%;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+
   }
 
   .contenedor-links.abierto {
     display: flex;
+  
   }
 
   .contenedor-links li {
     margin-bottom: 1rem;
+    width: 100%;
+    
+  }
+
+  .contenedor-links li:last-child {
+    margin-bottom: 0;
+
   }
 }
