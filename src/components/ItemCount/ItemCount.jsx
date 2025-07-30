@@ -1,6 +1,5 @@
 import { useState } from "react"
 import './ItemCount.css';
-import { Link } from "react-router-dom";
 const ItemCount = ({ stock, addProduct }) => {
     const [count, setCount] = useState(1);
 

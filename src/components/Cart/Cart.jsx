@@ -1,9 +1,9 @@
 import { useContext } from "react"
-import { Cartcontex } from "../../contex/cartcontex";
+import { CartContext } from "../../context/CartContext";
 import './Cart.css';
 import { Link, Links } from "react-router-dom";
 const Cart = () => {
-    const { cart, totalPrice, deleteProductById, deleteAllProducts } = useContext(Cartcontex);
+    const { cart, totalPrice, deleteProductById, deleteAllProducts } = useContext(CartContext);
 
     if (cart.length === 0) {
         return (

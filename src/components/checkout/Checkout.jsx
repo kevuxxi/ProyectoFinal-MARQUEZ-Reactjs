@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useContext } from 'react';
-import { Cartcontex } from '../../contex/cartcontex';
+import { CartContext } from "../../context/CartContext";
 import './Checkout.css';
 import FormCheckout from '../FormCheckout/FormCheckout';
 import { addDoc, collection } from 'firebase/firestore';
@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 
 const Checkout = () => {
-    const { cart, totalPrice } = useContext(Cartcontex);
+    const { cart, totalPrice, deleteAllProducts } = useContext(CartContext);
     const [orderid, setorderid] = useState(null);
 
     const [dataform, setdataform] = useState({
@@ -40,6 +40,7 @@ const Checkout = () => {
             const orderref = collection(db, 'orders');
             const resp = await addDoc(orderref, order);
             setorderid(resp.id);
+            deleteAllProducts()
         } catch (error) {
             console.log('error al subir la orden')
         }
