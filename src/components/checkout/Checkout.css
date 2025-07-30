@@ -1,0 +1,17 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    /* altura de pantalla completa */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* espacio entre inputs */
+    width: 300px;
+}
+
+

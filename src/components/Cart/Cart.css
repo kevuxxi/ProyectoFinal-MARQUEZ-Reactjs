@@ -38,6 +38,11 @@
     color: #e0e0e0;
 }
 
+.btns-container {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+}
 
 .cart-empty {
     padding: 0.5rem 1rem;
@@ -47,5 +52,16 @@
 }
 
 .cart-empty:hover {
+    background-color: #03dac5;
+}
+
+.cart-buy {
+    padding: 0.5rem 1rem;
+    background-color: #bb86fc;
+    color: #121212;
+    font-weight: bold;
+}
+
+.cart-buy:hover {
     background-color: #03dac5;
 }

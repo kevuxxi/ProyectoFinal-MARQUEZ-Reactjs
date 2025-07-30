@@ -24,10 +24,12 @@ const Cart = () => {
             }
 
             <p>Precio total: ${totalPrice()}</p>
-            <Link to='/checkout'> <button>Continuar con mi compra</button></Link>
-            <button onClick={deleteAllProducts} className="cart-empty">
-                Vaciar carrito
-            </button>
+            <div className="btns-container">
+                <Link to='/checkout'> <button className="cart-buy">Continuar con mi compra</button></Link>
+                <button onClick={deleteAllProducts} className="cart-empty">
+                    Vaciar carrito
+                </button>
+            </div>
         </div>
     )
 }

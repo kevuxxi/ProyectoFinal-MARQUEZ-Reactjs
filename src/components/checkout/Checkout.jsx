@@ -1,8 +1,16 @@
 import React, { useState } from 'react'
 import { useContext } from 'react';
 import { Cartcontex } from '../../contex/cartcontex';
+import './Checkout.css';
+import FormCheckout from '../FormCheckout/FormCheckout';
+import { addDoc, collection } from 'firebase/firestore';
+import db from '../../db/firebase';
+import { Link } from 'react-router-dom';
+
+
 const Checkout = () => {
     const { cart, totalPrice } = useContext(Cartcontex);
+    const [orderid, setorderid] = useState(null);
 
     const [dataform, setdataform] = useState({
         fullname: '',
@@ -23,17 +31,34 @@ const Checkout = () => {
             total: totalPrice()
         }
 
-        console.log(order)
+
+        uploadorder(order)
     }
-    
+
+    const uploadorder = async (order) => {
+        try {
+            const orderref = collection(db, 'orders');
+            const resp = await addDoc(orderref, order);
+            setorderid(resp.id);
+        } catch (error) {
+            console.log('error al subir la orden')
+        }
+    }
+
     return (
-        <div>
-            <form onSubmit={sendorder}>
-                <input type="text" name="fullname" value={dataform.fullname} onChange={handlechangeinput} />
-                <input type="number" name="phone" value={dataform.phone} onChange={handlechangeinput} />
-                <input type="email" name="email" value={dataform.email} onChange={handlechangeinput} />
-                <input type="submit" value="Enviar orden" />
-            </form>
+        <div className='checkout'>
+            {
+                orderid ? (
+                    <div>
+                        <h2>Orden Generada</h2>
+                        <p>Indentificador de Compra: {orderid} </p>
+                        <Link to={'/'}>
+                            <button>Seguir Comprando</button>
+                        </Link>
+                    </div>
+                ) :
+                    (<FormCheckout handlechangeinput={handlechangeinput} sendorder={sendorder} dataform={dataform} />)
+            }
         </div >
     )
 }
