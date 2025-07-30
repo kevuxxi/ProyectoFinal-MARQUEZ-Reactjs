@@ -50,3 +50,45 @@ form input[type="submit"]:hover {
   background-color: #03dac5;
   color: #000;
 }
+
+
+@media (max-width: 600px) {
+  .form-container {
+    padding: 1.5rem;
+    max-width: 100%;
+    margin: 1.5rem auto;
+  }
+
+  form input[type="text"],
+  form input[type="number"],
+  form input[type="email"] {
+    font-size: 0.9rem;
+    padding: 0.7rem 0.9rem;
+  }
+
+  form input[type="submit"] {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .form-container {
+    padding: 1rem;
+    margin: 1rem auto;
+    border-radius: 0.8rem;
+  }
+
+  form input[type="text"],
+  form input[type="number"],
+  form input[type="email"] {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  form input[type="submit"] {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}

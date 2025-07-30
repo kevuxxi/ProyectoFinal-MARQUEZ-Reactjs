@@ -22,3 +22,39 @@
     font-weight: bold;
     color: #e0e0e0;
 }
+
+
+@media (max-width: 480px) {
+    .item-count {
+        gap: 0.6rem;
+        justify-content: center;
+    }
+
+    .item-count button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+        min-width: 50px;
+    }
+
+    .item-count p {
+        font-size: 1rem;
+        min-width: 30px;
+    }
+}
+
+@media (max-width: 320px) {
+    .item-count {
+        gap: 0.4rem;
+    }
+
+    .item-count button {
+        padding: 0.35rem 0.7rem;
+        font-size: 0.85rem;
+        min-width: 45px;
+    }
+
+    .item-count p {
+        font-size: 0.9rem;
+        min-width: 25px;
+    }
+}

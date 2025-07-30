@@ -62,3 +62,74 @@
 .button-item:hover {
   background-color: #03dac5;
 }
+
+@media (max-width: 768px) {
+  .item-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .img-item {
+    max-height: 140px;
+    max-width: 200px;
+  }
+
+  .title-item {
+    font-size: 1rem;
+  }
+
+  .price-item {
+    font-size: 0.95rem;
+  }
+
+  .button-item {
+    font-size: 0.95rem;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .item-list {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .img-item {
+    max-height: 120px;
+    max-width: 100%;
+  }
+
+  .title-item {
+    font-size: 0.95rem;
+  }
+
+  .price-item {
+    font-size: 0.9rem;
+  }
+
+  .button-item {
+    font-size: 1rem;
+    padding: 0.7rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .item {
+    padding: 1rem;
+  }
+
+  .title-item {
+    font-size: 0.9rem;
+  }
+
+  .price-item {
+    font-size: 0.85rem;
+  }
+
+  .button-item {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}

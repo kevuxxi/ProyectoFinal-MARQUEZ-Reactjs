@@ -1,6 +1,7 @@
 .order-confirmation {
   background-color: #1e1e1e;
-  color: #03dac5;;
+  color: #03dac5;
+  ;
   padding: 2rem;
   border-radius: 1rem;
   max-width: 500px;
@@ -33,4 +34,47 @@
 .order-confirmation button:hover {
   background-color: #03dac5;
   color: #000;
+}
+
+
+@media (max-width: 600px) {
+  .order-confirmation {
+    padding: 1.5rem;
+    margin: 2rem auto;
+  }
+
+  .order-confirmation h2 {
+    font-size: 1.5rem;
+  }
+
+  .order-confirmation p {
+    font-size: 1rem;
+  }
+
+  .order-confirmation button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .order-confirmation {
+    padding: 1rem;
+    margin: 1rem auto;
+    border-radius: 0.8rem;
+  }
+
+  .order-confirmation h2 {
+    font-size: 1.3rem;
+  }
+
+  .order-confirmation p {
+    font-size: 0.95rem;
+  }
+
+  .order-confirmation button {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
 }

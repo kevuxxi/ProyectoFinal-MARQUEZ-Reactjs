@@ -47,3 +47,28 @@
 .gotocar:hover {
   background-color: #03dac5;
 }
+
+@media (max-width: 350px) {
+  .item-detail {
+    padding: 1rem;
+  }
+
+  .item-detail img {
+    max-height: 180px;
+    margin-bottom: 0.6rem;
+  }
+
+  .item-detail h1 {
+    font-size: 1.3rem;
+  }
+
+  .item-detail p {
+    font-size: 0.9rem;
+  }
+
+  .gotocar {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    min-width: 70px;
+  }
+}

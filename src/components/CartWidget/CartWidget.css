@@ -19,3 +19,36 @@
   top: -6px;
   right: -6px;
 }
+
+
+@media (max-width: 768px) {
+  .cart-widget .carrito {
+    width: 24px;
+    height: 24px;
+  }
+
+  .cart-count {
+    font-size: 0.65rem;
+    padding: 1px 5px;
+    top: -5px;
+    right: -5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-widget {
+    padding: 0.2rem;
+  }
+
+  .cart-widget .carrito {
+    width: 20px;
+    height: 20px;
+  }
+
+  .cart-count {
+    font-size: 0.6rem;
+    padding: 1px 4px;
+    top: -4px;
+    right: -4px;
+  }
+}

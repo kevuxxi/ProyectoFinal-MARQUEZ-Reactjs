@@ -31,4 +31,35 @@ img {
   padding: 1rem 0;
 }
 
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 0.8rem 0;
+  }
 
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Para móviles (≤ 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  img {
+    border-radius: 0.3rem;
+  }
+}
