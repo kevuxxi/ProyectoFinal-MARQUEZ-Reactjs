@@ -3,14 +3,14 @@ import Navbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import { Cartprovider } from "./context/CartContext";
+import { CartProvider } from "./context/CartContext";
 import Cart from './components/Cart/Cart';
 import Checkout from './components/checkout/Checkout';
 
 function App() {
   return (
     <BrowserRouter>
-      <Cartprovider>
+      <CartProvider>
         <div className="container">
           <Navbar />
 
@@ -23,7 +23,7 @@ function App() {
             <Route path="*" element={<div>Error 404</div>} />
           </Routes>
         </div>
-      </Cartprovider>
+      </CartProvider>
     </BrowserRouter>
   );
 }
